@@ -18,7 +18,6 @@ class AddTodo extends BaseController
 {
     $todoModel = new Todos();
 
-    // Quy tắc xác thực
     $validationRules = [
         'subject' => [
             'rules' => 'required|min_length[4]|regex_match[/^\D*$/]',

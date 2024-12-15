@@ -52,11 +52,10 @@ class EditTodo extends BaseController
     
         session()->setFlashdata('success', 'Cập nhật môn học thành công!');
     
-        return view('/EditSub', [
-            'subject' => $this->request->getPost(), 
+        return view('EditSub', [
+            'subject' => $todoModel->find($id), 
             'success' => 'Cập nhật môn học thành công!', 
-        ]);
-    }
+        ]);    }
 }    
 
 ?>
